@@ -30,13 +30,32 @@ class MyApp extends StatelessWidget {
     // Center(child: container); // 위젯 내부에 위젯을 위치하고 싶을때 child 를 사용한다.
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.blue,
+          title: Text(
+              'AuKeep',
+            style: TextStyle(color: Colors.white) ,
+          ),
+        ),
         body: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly, // css flex 와 유사
+          // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Text('Gold'),
             Icon(Icons.star),
-            Icon(Icons.star),
-            Icon(Icons.star)
+            Text('Silver')
           ],
+        ),
+        bottomNavigationBar: BottomAppBar(
+          color: Colors.white,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+              Icon(Icons.phone),
+              Icon(Icons.message),
+              Icon(Icons.contact_page)
+            ]
+          ),
         ),
         // bottomNavigationBar: BottomAppBar(),
       )
