@@ -30,7 +30,8 @@ class MyApp extends StatelessWidget {
     // Center(child: container); // 위젯 내부에 위젯을 위치하고 싶을때 child 를 사용한다.
     return MaterialApp(
       home: Scaffold(
-        body: Column(
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly, // css flex 와 유사
           children: [
             Icon(Icons.star),
             Icon(Icons.star),
