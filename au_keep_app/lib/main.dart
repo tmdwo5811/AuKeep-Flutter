@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         bottomNavigationBar: BottomAppBar(
-          child: ElevatedButton(onPressed: (){}, child: Text('Action')),
+          child: IconButton(onPressed: (){}, icon: Icon(Icons.star)),
         ),
       )
     );
