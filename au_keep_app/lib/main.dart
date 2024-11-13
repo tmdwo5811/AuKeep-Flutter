@@ -37,27 +37,15 @@ class MyApp extends StatelessWidget {
             style: TextStyle(color: Colors.white) ,
           ),
         ),
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly, // css flex 와 유사
-          // crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text('Gold'),
-            Icon(Icons.star),
-            Text('Silver')
-          ],
-        ),
-        bottomNavigationBar: BottomAppBar(
-          color: Colors.white,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-              Icon(Icons.phone),
-              Icon(Icons.message),
-              Icon(Icons.contact_page)
-            ]
+        body: Align(
+          alignment: Alignment.bottomCenter,
+          child: Container(
+            width: double.infinity, height: 50, color: Colors.blue,
           ),
         ),
-        // bottomNavigationBar: BottomAppBar(),
+        bottomNavigationBar: BottomAppBar(
+          child: ElevatedButton(onPressed: (){}, child: Text('Action')),
+        ),
       )
     );
   }
